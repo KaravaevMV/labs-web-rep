@@ -1,0 +1,17 @@
+<title>"Архив статей"</title>
+<body> 
+    <div class="header"> <img  src="https://images-platform.99static.com//JYSIbUIVMlm6k85wKxblbowVVB4=/265x256:934x925/fit-in/590x590/99designs-contests-attachments/107/107137/attachment_107137321" /> 
+    </div> 
+    <div class="archive">
+        <div class="one-post"> 
+        {% for post in posts %}
+            <h2 class="post-title">{{ post.title }}</h2> 
+            <div class="article-info"> 
+            <div class="article-author">{{ post.author.username }}</div> 
+            <div class="article-created-date">{{ post.created_date }}</div> 
+            </div> 
+            <p class="article-text">{{ post.get_excerpt }}</p> 
+            </div>
+        {% endfor %} 
+    </div> 
+    </body> 
